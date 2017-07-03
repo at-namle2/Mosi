@@ -1,0 +1,14 @@
+.slide {
+  position: relative;
+  .wraper-slide {
+    position: absolute;
+    left: 100px;
+    top: 40px;
+    .tilte-design {
+      color: map-get($color, green);
+      .date {
+        color: map-get($color, white);
+      }
+    }
+  }
+}
