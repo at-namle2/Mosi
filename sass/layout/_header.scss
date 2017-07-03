@@ -40,7 +40,11 @@
     @extend %no-mr-pd;
     .main-menu-item {
       display: inline-block;
-      padding: 0 16px;
+      padding: 0 22px;
+      .main-menu-item-a {
+        text-decoration: none;
+        color: map-get($color, black);
+      }
     }
   }
   .cart {
@@ -52,7 +56,6 @@
         width: 30px;
         height: 30px;
         border: 1px solid map-get($color, green);
-        text-align: center;
         margin-right: 6px;
         .cart-menu-item-a {
           color: map-get($color, green);
