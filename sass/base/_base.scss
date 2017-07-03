@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 15px;
+  color: map-get($color, gray);
+  line-height: 1.8em;
+  font-weight: 400;
+  background: map-get($color, white);
+}
+h1, h2 , h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0px;
+  background: none;
+  line-height: 1.6em;
+}
+.row::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+[class*="col-"] {
+  float: left;
+  margin-right: 2.6%;
+}
+[class*="col-"]:first-child {
+    margin-left: 0px;
+}
+[class*="col-"]:last-child {
+    margin-right: 0px;
+}
+@for $i from 1 through 12 {
+  .col-#{$i}{
+    width: (100% - (12/$i - 1) * 2.6)/(12/$i);
+  }
+}
+.btn {
+  @include border-radius(25px);
+  cursor: pointer;
+  padding: 12px 30px;
+  line-height: 24px;
+  letter-spacing: 0;
+  &.btn-organe {
+    background: map-get($color, orange);
+    color: map-get($color, green);
+    text-decoration: none;
+    &:hover {
+      @include transition(all 0.5s linear);
+      background: transparent;
+      border: 2px solid map-get($color, orange);
+      color: map-get($color, white);
+    }
+  }
+  &.btn-green {
+    color: map-get($color, white);
+    background: map-get($color, green);
+    text-decoration: none;
+    &:hover {
+      @include transition(all 0.5s linear);
+      background: transparent;
+      border: 2px solid map-get($color, green);
+      color: map-get($color, green);
+    }
+  }
+  &.btn-green-2 {
+    background: transparent;
+    border: 2px solid map-get($color, green);
+    color: map-get($color, green);
+    text-decoration: none;
+    &:hover {
+      @include transition(all 0.5s linear);
+      background: map-get($color, green);
+      color: map-get($color, white);
+    }
+  }
+  &.btn-white {
+    color: map-get($color, white);
+    background: transparent;
+    text-decoration: none;
+    border: 2px solid map-get($color, white);
+    &:hover {
+      @include transition(all 0.5s linear);
+      background: map-get($color, white);
+      color: map-get($color, black);
+    }
+  }
+}
+.font-robo-condensed {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.img {
+  max-width: 100%;
+  width: 100%;
+}
+.font-size-12 {
+  font-size: 12px;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
