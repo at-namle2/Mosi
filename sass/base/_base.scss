@@ -3,8 +3,9 @@
   padding: 0;
 }
 body {
-  font-size: 15px;
-  color: map-get($color, gray);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  // color: map-get($color, gray);
   line-height: 1.8em;
   font-weight: 400;
   background: map-get($color, white);
@@ -52,42 +53,6 @@ h1, h2 , h3, h4, h5, h6 {
       color: map-get($color, white);
     }
   }
-  &.btn-green {
-    color: map-get($color, white);
-    background: map-get($color, green);
-    text-decoration: none;
-    &:hover {
-      @include transition(all 0.5s linear);
-      background: transparent;
-      border: 2px solid map-get($color, green);
-      color: map-get($color, green);
-    }
-  }
-  &.btn-green-2 {
-    background: transparent;
-    border: 2px solid map-get($color, green);
-    color: map-get($color, green);
-    text-decoration: none;
-    &:hover {
-      @include transition(all 0.5s linear);
-      background: map-get($color, green);
-      color: map-get($color, white);
-    }
-  }
-  &.btn-white {
-    color: map-get($color, white);
-    background: transparent;
-    text-decoration: none;
-    border: 2px solid map-get($color, white);
-    &:hover {
-      @include transition(all 0.5s linear);
-      background: map-get($color, white);
-      color: map-get($color, black);
-    }
-  }
-}
-.font-robo-condensed {
-  font-family: 'Roboto Condensed', sans-serif;
 }
 .img {
   max-width: 100%;
@@ -95,6 +60,9 @@ h1, h2 , h3, h4, h5, h6 {
 }
 .font-size-12 {
   font-size: 12px;
+}
+.font-size-18 {
+  font-size: 18px;
 }
 .font-size-30 {
   font-size: 30px;

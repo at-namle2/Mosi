@@ -1,0 +1,63 @@
+.wraper-header-top {
+   border-bottom: 1px solid map-get($color, gray);
+  .top-fat {
+    line-height: 20px;
+    padding: 20px 0 20px;
+    .fat {
+      margin-top: 10px;
+      .img-flat {
+        max-width: 38px;
+        padding-right: 10px;
+      }
+      .usd {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 24px;
+      }
+    }
+    .search {
+      .search-input {
+        @extend %ol-bd;
+        height: 30px;
+        padding: 0 10px;
+      }
+      .button-search {
+        @extend %ol-bd;
+        background: transparent;
+      }
+    }
+    .user {
+      .img-user {
+        max-width: 20px;
+        padding-right: 6px;
+      }
+    }
+  }
+}
+.wraper-header-bottom {
+  padding: 36px 0 36px;
+  .main-menu {
+    @extend %no-mr-pd;
+    .main-menu-item {
+      display: inline-block;
+      padding: 0 16px;
+    }
+  }
+  .cart {
+    .cart-menu {
+      @extend %no-mr-pd;
+      .cart-menu-item {
+        border-radius: 50%;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 1px solid map-get($color, green);
+        text-align: center;
+        margin-right: 6px;
+        .cart-menu-item-a {
+          color: map-get($color, green);
+        }
+      }
+    }
+  }
+}
