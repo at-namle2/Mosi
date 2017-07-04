@@ -35,6 +35,12 @@ h1, h2 , h3, h4, h5, h6 {
     width: (100% - (12/$i - 1) * 2.6)/(12/$i);
   }
 }
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+.active {
+  color: map-get($color, green) !important;
+}
 .btn {
   cursor: pointer;
   padding: 10px 30px;
@@ -42,6 +48,10 @@ h1, h2 , h3, h4, h5, h6 {
   &.btn-green {
     background: map-get($color, green);
     color: map-get($color, white);
+    &:hover {
+      @include transition(all .3s linear);
+      background: map-get($color, orange);
+    }
   }
 }
 .welcome-to {

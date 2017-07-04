@@ -1,5 +1,5 @@
-.wraper-footer {
-  padding: 60px 0 100px;
+.wraper-top-footer {
+  padding-top: 60px;
   .title-about {
     padding-bottom: 50px;
   }
@@ -31,6 +31,61 @@
     }
   }
   .menu-fashion {
-
+    @extend %no-mr-pd;
+    .menu-fashion-item {
+      border-bottom: 1px solid map-get($color, gray);
+      margin-bottom: 16px;
+      .menu-fashion-item-a {
+        color: map-get($color, green);
+        text-decoration: none;
+        padding-bottom: 10px;
+        &:before {
+          content: "\f054";
+          margin-right: 15px;
+        }
+      }
+    }
   }
+}
+.wapper-bottom-footer {
+  padding: 60px 0 30px;
+  .form-our {
+    width: 360px;
+    border-bottom: 1px solid map-get($color, gray);
+    position: relative;
+  }
+  .input-form {
+    @extend %ol-bd;
+    width: 100%;
+    font-style: italic;
+    padding: 15px 70px 15px 5px;
+    background: transparent;
+  }
+  .submit {
+    @extend %ol-bd;
+    cursor: pointer;
+    background: transparent;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 0;
+  }
+  .themespond {
+    color: map-get($color, green);
+    text-decoration: none;
+  }
+}
+.back-top {
+  @include border-radius(100%);
+  position: fixed;
+  bottom: 50px;
+  right: 10%;
+  width: 40px;
+  height: 40px;
+  line-height: 36px;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 99;
 }

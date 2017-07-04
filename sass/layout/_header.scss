@@ -40,26 +40,79 @@
     @extend %no-mr-pd;
     .main-menu-item {
       display: inline-block;
-      padding: 0 22px;
+      padding: 0 14px;
+      position: relative;
       .main-menu-item-a {
         text-decoration: none;
         color: map-get($color, black);
+        &:hover {
+          color: map-get($color, green);
+          &:before {
+          @include transition(all .3s linear);
+          content: '';
+          width: 66px;
+          height: 4px;
+          position: absolute;
+          background: map-get($color, green);
+          top: -36px;
+          left: 17px;
+          }
+        }
+        &.main-menu-after {
+          &:after {
+            content: '\f107';
+            margin-left: 5px;
+          }
+        }
+      }
+      .active-main-a {
+        &:before {
+          content: '';
+          width: 66px;
+          height: 4px;
+          position: absolute;
+          background: map-get($color, green);
+          top: -36px;
+          left: 17px;
+        }
       }
     }
   }
   .cart {
+    position: relative;
     .cart-menu {
       @extend %no-mr-pd;
       .cart-menu-item {
-        border-radius: 50%;
+        @include border-radius(50%);
         display: inline-block;
         width: 30px;
         height: 30px;
         border: 1px solid map-get($color, green);
         margin-right: 6px;
+        &.item-a {
+          border: 1px solid map-get($color, orange);
+        }
         .cart-menu-item-a {
           color: map-get($color, green);
+          &.item-a {
+            color: map-get($color, orange);
+          }
         }
+      }
+    }
+    .product-count {
+      position: absolute;
+      top: -8px;
+      width: 20px;
+      line-height: 20px;
+      height: 20px;
+      &.white {
+        background: map-get($color, white);
+        right: 40px;
+      }
+      &.orange {
+        background: map-get($color, white);
+        right: -4px;
       }
     }
   }
