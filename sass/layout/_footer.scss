@@ -1,0 +1,36 @@
+.wraper-footer {
+  padding: 60px 0 100px;
+  .title-about {
+    padding-bottom: 50px;
+  }
+  .desc-text {
+    padding-bottom: 20px;
+  }
+  .socials {
+    @extend %no-mr-pd;
+    .social-item {
+      display: inline-block;
+      padding-right: 16px;
+      .social-item-a {
+        color: map-get($color, black);
+      }
+    }
+  }
+  .map {
+    margin-bottom: 20px;
+    .fam {
+      padding-right: 8px;
+    }
+    .phone-number {
+      color: map-get($color, black);
+    }
+    .map-fas {
+      display: inline-block;
+      width: 240px;
+      vertical-align: top;
+    }
+  }
+  .menu-fashion {
+
+  }
+}

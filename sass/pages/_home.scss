@@ -4,11 +4,105 @@
     position: absolute;
     left: 100px;
     top: 40px;
+    .tiltle-jacket {
+      color: map-get($color, white);
+    }
+    .desc-slide {
+      padding-bottom: 30px;
+      color: map-get($color, white);
+    }
     .tilte-design {
       color: map-get($color, green);
       .date {
         color: map-get($color, white);
       }
     }
+  }
+}
+// welcome-myshop//
+.welcome-myshop {
+  .title-pashion {
+    color: map-get($color, gray-2);
+  }
+  .desc-welcome {
+    padding-bottom: 60px;
+    color: map-get($color, gray-2);
+  }
+}
+//featured-products//
+.featured-products {
+  padding-bottom: 60px;
+  .featured {
+    padding-bottom: 60px;
+  }
+}
+// new-design//
+.new-design {
+  background: url(../img/banner/1.jpg) no-repeat;
+  height: 380px;
+  padding-top: 136px;
+  .title-news-design, .title-sition, .desc-design {
+    color: map-get($color, white);
+    &.sition {
+      padding-bottom: 20px;
+    }
+    &.desc-desi {
+      padding: 0 20px 40px;
+    }
+  }
+}
+.awesome-product {
+  padding-bottom: 60px;
+  .awesome {
+    padding-bottom: 60px;
+  }
+  .menu-awesome {
+    @extend %no-mr-pd;
+    padding-bottom: 40px;
+    .menu-awesome-item {
+      display: inline-block;
+      padding-right: 80px;
+      .menu-awesome-a {
+        text-decoration: none;
+        color: map-get($color, black);
+        font-weight: bold;
+        &:hover {
+          color: map-get($color, green);
+        }
+        &.active {
+          color: map-get($color, green);
+        }
+      }
+    }
+  }
+}
+// new-blog//
+.news-blog {
+  padding-bottom: 60px;
+  border-bottom: 1px solid map-get($color, gray);
+  .title-zoey {
+    color: map-get($color, black);
+    font-weight: bold;
+  }
+  .fao {
+    &:before {
+      content: "\f0e6";
+      padding-left: 10px;
+    }
+  }
+  .fac {
+    &:before {
+      content: "\f073";
+      padding-right: 10px;
+    }
+  }
+  .fal {
+    &:before {
+      content: "\f08e";
+      padding-right: 10px;
+    }
+  }
+  .read-more {
+    color: map-get($color, green);
   }
 }

@@ -5,7 +5,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  // color: map-get($color, gray);
   line-height: 1.8em;
   font-weight: 400;
   background: map-get($color, white);
@@ -45,6 +44,35 @@ h1, h2 , h3, h4, h5, h6 {
     color: map-get($color, white);
   }
 }
+.welcome-to {
+  display: block;
+  .title-welcome {
+    padding-top: 60px;
+    &:before {
+      content: '';
+      width: 75px;
+      height: 4px;
+      display: block;
+      margin: 0 auto;
+      background: map-get($color, green);
+      margin-bottom: 20px;
+    }
+  }
+}
+.star {
+  display: block;
+  color: map-get($color, orange);
+}
+.tiltle-denim {
+  padding: 30px 0 10px;
+}
+.sale {
+  .sale-dolar-1 {
+    text-decoration: line-through;
+    padding-right: 10px;
+    color: map-get($color, orange);
+  }
+}
 .img {
   max-width: 100%;
   width: 100%;
@@ -53,13 +81,16 @@ h1, h2 , h3, h4, h5, h6 {
   font-size: 12px;
 }
 .font-size-16 {
-  font-size: 17px;
+  font-size: 16px;
 }
 .font-size-17 {
   font-size: 17px;
 }
 .font-size-18 {
   font-size: 18px;
+}
+.font-size-24 {
+  font-size: 24px;
 }
 .font-size-30 {
   font-size: 30px;
