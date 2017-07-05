@@ -2,6 +2,14 @@
   padding-top: 60px;
   .title-about {
     padding-bottom: 50px;
+    font-weight: bold;
+  }
+  .img-scale {
+    &:hover {
+      @include transition(all 1.2s linear);
+      opacity: 0.4;
+      transform: scale(1.1);
+    }
   }
   .desc-text {
     padding-bottom: 20px;
@@ -13,6 +21,10 @@
       padding-right: 16px;
       .social-item-a {
         color: map-get($color, black);
+        &:hover {
+          @include transition(all .4s linear);
+          color: map-get($color, orange);
+        }
       }
     }
   }
@@ -39,6 +51,10 @@
         color: map-get($color, green);
         text-decoration: none;
         padding-bottom: 10px;
+        &:hover {
+          @include transition(all .4s linear);
+          padding-left: 10px;
+        }
         &:before {
           content: "\f054";
           margin-right: 15px;
@@ -63,10 +79,10 @@
   }
   .submit {
     @extend %ol-bd;
+    position: absolute;
     cursor: pointer;
     background: transparent;
     font-weight: bold;
-    position: absolute;
     top: 15px;
     right: 0;
   }
@@ -83,9 +99,8 @@
   width: 40px;
   height: 40px;
   line-height: 36px;
-  color: #ffffff;
+  color: map-get($color, white);
   font-size: 24px;
-  text-align: center;
   cursor: pointer;
   z-index: 99;
 }

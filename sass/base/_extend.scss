@@ -15,3 +15,52 @@
   outline: none;
   border: none;
 }
+//hover-img//
+%hover-menu-hover {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+%hover-menu-item {
+  @include border-radius(100%);
+  background: map-get($color, green);
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 14px;
+  &:hover {
+    color: map-get($color, green);
+    background: map-get($color, white);
+  }
+}
+%hover-menu-item-a {
+  text-align: center;
+  color: map-get($color, white);
+  line-height: 30px;
+  &:hover {
+    color: map-get($color, green);
+  }
+}
+%onsale {
+  @include border-radius(100%);
+  color: map-get($color, white);
+  background: map-get($color, orange);
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+}
+%hover-main {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  width: 100%;
+}

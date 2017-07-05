@@ -101,52 +101,33 @@
   .hover-main {
     position: relative;
     &:before {
-      @include transition(all .4s linear);
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
-      opacity: 0;
-      width: 100%;
-      height: 98%;
+      @extend %hover-main;
+      height: 80%;
     }
     .hover-menu-hover {
-      display: none;
-      position: absolute;
-      top: 25%;
-      left: 25%;
+      @extend %hover-menu-hover;
       .hover-menu {
         @extend %no-mr-pd;
         padding-bottom: 30px;
         .hover-menu-item {
-          @include border-radius(100%);
-          background: map-get($color, green);
-          display: inline-block;
-          width: 30px;
-          height: 30px;
-          margin-right: 14px;
-          &:hover {
-            color: map-get($color, green);
-            background: map-get($color, white);
-          }
+          @extend %hover-menu-item;
           .hover-menu-item-a {
-            text-align: center;
-            color: map-get($color, white);
-            line-height: 30px;
-            &:hover {
-              color: map-get($color, green);
-            }
+            @extend %hover-menu-item-a;
           }
         }
       }
     }
     &:hover {
+      &:before {
+        opacity: 1;
+      }
+      @include transition(all .4s linear);
       .hover-menu-hover {
         display: block;
       }
+    }
+    .onsale {
+      @extend %onsale;
     }
   }
 }
@@ -165,6 +146,7 @@
     }
   }
 }
+// awesome-product//
 .awesome-product {
   padding-bottom: 60px;
   .awesome {
@@ -186,34 +168,99 @@
       }
     }
   }
+  .hover-main {
+    position: relative;
+    .hover-menu-hover {
+      @extend %hover-menu-hover;
+      .hover-menu {
+        @extend %no-mr-pd;
+        padding-bottom: 30px;
+        .hover-menu-item {
+          @extend %hover-menu-item;
+          .hover-menu-item-a {
+            @extend %hover-menu-item-a;
+          }
+        }
+      }
+    }
+    &:hover {
+      @include transition(all .4s linear);
+      .hover-menu-hover {
+        display: block;
+      }
+    }
+   .onsale {
+      @extend %onsale;
+    }
+  }
 }
 // new-blog//
 .news-blog {
   padding-bottom: 60px;
   border-bottom: 1px solid map-get($color, gray);
-  .title-zoey {
-    color: map-get($color, black);
-    font-weight: bold;
-  }
-  .fao {
+  .post-hover {
+    position: relative;
     &:before {
-      content: "\f0e6";
-      padding-left: 10px;
+      @extend %hover-main;
+      height: 65%;
     }
-  }
-  .fac {
-    &:before {
-      content: "\f073";
-      padding-right: 10px;
+    .title-zoey {
+      color: map-get($color, black);
+      font-weight: bold;
+      &:hover {
+        color: map-get($color, green);
+      }
     }
-  }
-  .fal {
-    &:before {
-      content: "\f08e";
-      padding-right: 10px;
+    .fao {
+      &:before {
+        content: "\f0e6";
+        padding-left: 10px;
+      }
     }
-  }
-  .read-more {
-    color: map-get($color, green);
+    .fac {
+      &:before {
+        content: "\f073";
+        padding-right: 10px;
+      }
+    }
+    .fal {
+      &:before {
+        content: "\f08e";
+        padding-right: 10px;
+      }
+    }
+    .read-more {
+      color: map-get($color, green);
+    }
+    .post-format-hover {
+      position: absolute;
+      display: none;
+      top: 30%;
+      left: 45%;
+      .hover-menu {
+        @extend %no-mr-pd;
+        .hover-menu-item {
+          display: inline-block;
+          margin: 0 6px;
+          line-height: 36px;
+          width: 30px;
+          height: 30px;
+          background:rgba(255,255,255, 0.3);
+          color: map-get($color, gray-1);
+          &:hover {
+            background: map-get($color, green);
+            color: map-get($color, white);
+          }
+        }
+      }
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+      .post-format-hover {
+        display: block;
+      }
+    }
   }
 }
