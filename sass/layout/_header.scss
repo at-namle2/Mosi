@@ -5,14 +5,38 @@
     padding: 20px 0 20px;
     .fat {
       margin-top: 10px;
+      position: relative;
       .img-flat {
-        max-width: 38px;
+        max-width: 30px;
         padding-right: 10px;
       }
       .usd {
-        display: inline-block;
-        vertical-align: top;
-        line-height: 24px;
+        @extend %usd;
+      }
+      .menu-usd {
+        @include transition(all .4s linear);
+        @extend %menu-usd;
+        top: 45px;
+        left: 0;
+        .menu-usd-item {
+          padding: 10px 10px 10px;
+          border: 1px solid map-get($color, gray);
+          &.usd-item {
+            border-bottom: 5px solid map-get($color, green);
+          }
+          .menu-usd-item-a {
+            @extend %menu-usd-item-a;
+            &:hover {
+              color: map-get($color, orange);
+            }
+          }
+        }
+      }
+      &:hover {
+        .menu-usd {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
     .search {
@@ -30,6 +54,40 @@
       .img-user {
         max-width: 20px;
         padding-right: 6px;
+      }
+      .usd {
+        @extend %usd;
+      }
+      .menu-usd {
+        @include transition(all .4s linear);
+        @extend %menu-usd;
+        top: 76px;
+        right: 134px;
+        opacity: 0;
+        text-align: left;
+        .menu-usd-item {
+          padding: 10px 10px 10px;
+          border: 1px solid map-get($color, gray);
+          &.usd-item {
+            border-bottom: 5px solid map-get($color, green);
+          }
+          .menu-usd-item-a {
+            @extend %menu-usd-item-a;
+            &:hover {
+              color: map-get($color, green);
+              padding-left: 10px;
+            }
+          }
+          .fasign {
+            padding: 0 10px;
+          }
+        }
+      }
+      &:hover {
+        .menu-usd {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
   }
