@@ -35,16 +35,55 @@
   }
 }
 .wraper-header-bottom {
-  padding: 36px 0 36px;
+  padding: 20px 0 10px;
   .main-menu {
     @extend %no-mr-pd;
     .main-menu-item {
       display: inline-block;
       padding: 0 14px;
       position: relative;
+      &.sub {
+        position: relative;
+        .sub-menu {
+          position: absolute;
+          display: none;
+          width: 220px;
+          height: 152px;
+          background: map-get($color, white);
+          top: 59px;
+          z-index: 99;
+          .sub-menu-item {
+            display: block;
+            padding: 6px 16px;
+            border-bottom: 1px solid map-get($color, gray);
+            .sub-menu-item-a {
+              color: map-get($color, black);
+              text-decoration: none;
+              font-weight: bold;
+              &:hover {
+                @include transition(all .4s linear);
+                color: map-get($color, green);
+                padding-left: 10px;
+              }
+              .far {
+                padding-left: 110px;
+              }
+            }
+          }
+          &.sub-menu-menu {
+            height: 114px;
+          }
+        }
+        &:hover {
+          .sub-menu {
+            display: block;
+          }
+        }
+      }
       .main-menu-item-a {
         text-decoration: none;
         color: map-get($color, black);
+        line-height: 60px;
         &:hover {
           color: map-get($color, green);
           &:before {
@@ -54,7 +93,7 @@
           height: 4px;
           position: absolute;
           background: map-get($color, green);
-          top: -36px;
+          top: -20px;
           left: 17px;
           }
         }
@@ -72,7 +111,7 @@
           height: 4px;
           position: absolute;
           background: map-get($color, green);
-          top: -36px;
+          top: -20px;
           left: 17px;
         }
       }

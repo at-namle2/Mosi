@@ -51,6 +51,7 @@
         color: map-get($color, green);
         text-decoration: none;
         padding-bottom: 10px;
+        font-weight: bold;
         &:hover {
           @include transition(all .4s linear);
           padding-left: 10px;
@@ -90,17 +91,4 @@
     color: map-get($color, green);
     text-decoration: none;
   }
-}
-.back-top {
-  @include border-radius(100%);
-  position: fixed;
-  bottom: 50px;
-  right: 10%;
-  width: 40px;
-  height: 40px;
-  line-height: 36px;
-  color: map-get($color, white);
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 99;
 }
