@@ -42,6 +42,34 @@
       display: inline-block;
       padding: 0 14px;
       position: relative;
+      .lebal-menu {
+        @include border-radius(1px);
+        padding: 1px 5px 1px 5px;
+        text-transform: none;
+        position: absolute;
+        display: inline-block;
+        line-height: 14px;
+        right: 0;
+        top: 5px;
+        color: map-get($color, white);
+        background: map-get($color, orange-1);
+        &:after {
+          content: "";
+          position: absolute;
+          left: 3px;
+          top: 83%;
+          margin: 0;
+          border: 3px solid transparent;
+          background: map-get($color, orange-1);
+          transform: rotate(312deg);
+        }
+        &.lebel {
+          background: map-get($color, orange);
+          &:after {
+            background: map-get($color, orange);
+          }
+        }
+      }
       &.sub {
         position: relative;
         .sub-menu {
@@ -87,14 +115,13 @@
         &:hover {
           color: map-get($color, green);
           &:before {
-          @include transition(all .3s linear);
-          content: '';
-          width: 66px;
-          height: 4px;
-          position: absolute;
-          background: map-get($color, green);
-          top: -20px;
-          left: 17px;
+            content: '';
+            width: 66px;
+            height: 4px;
+            position: absolute;
+            background: map-get($color, green);
+            top: -20px;
+            left: 17px;
           }
         }
         &.main-menu-after {
